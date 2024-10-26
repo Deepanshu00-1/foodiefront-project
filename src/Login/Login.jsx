@@ -12,6 +12,8 @@ const Login = () => {
     const [userName, setUserName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    
     const onSubmitHandler =(event)=>{
       event.preventDefault();
       if(currState === 'Sign Up'){

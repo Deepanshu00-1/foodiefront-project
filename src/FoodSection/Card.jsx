@@ -1,10 +1,13 @@
 import { useContext, useState } from "react"
 import { countContext } from "../context/count";
 import { itemAddedContext } from "../context/addedItemContext";
- 
+import { NotifyContext } from "../context/itemNotificationContext"; 
+
 export let items = [];
 
-const FoodCard =({Img, foodName, foodInfo, price, priceAmount})=>{
+const FoodCard =({Id ,Img, foodName, foodInfo, price, priceAmount})=>{
+
+    let notify = useContext(NotifyContext)
 
     let value = useContext(countContext);
 
@@ -27,13 +30,14 @@ const FoodCard =({Img, foodName, foodInfo, price, priceAmount})=>{
             priceAmount
         }
         items[value.count] = addedItem
-        console.log(cart.cartItems)
+        // console.log(cart.cartItems)
 
+        notify.setNotify(true)
     }
-
+    console.log(notify.notify)
     return(
         <>
-        <div className="card">
+        <div className="card" key={Id}>
             <div className="img">
                 <img src={Img} alt="" />
             </div>

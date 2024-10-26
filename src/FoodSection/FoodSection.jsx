@@ -5,6 +5,7 @@ import FoodCard from "./Card"
 const displayFoodCard = (FoodData1)=>{
     return(
         <FoodCard
+        Id = {FoodData1.id}
         Img = {FoodData1.imgUrl}
         foodName = {FoodData1.foodName}
         foodInfo = {FoodData1.foodInfo}

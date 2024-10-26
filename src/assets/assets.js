@@ -46,7 +46,7 @@ export const appetizers = [
     }
 ]
 
-export const maincourse = [
+export const maincourses = [
     {
         item_name: 'Chicken parmesan',
         item_image: maincourse1 
@@ -73,7 +73,82 @@ export const maincourse = [
     }
 ]
 
-export const desert = [
+export const deserts = [
+    {
+        item_name: 'Apple pie',
+        item_image: desert1 
+    },
+    {
+        item_name: 'Cheesecake',
+        item_image: desert2 
+    },
+    {
+        item_name: 'Chocolate lava cake',
+        item_image: desert3
+    },
+    {
+        item_name: 'Creme Brulee',
+        item_image: desert4 
+    },
+    {
+        item_name: 'Panna Cotta',
+        item_image: desert5 
+    },
+    {
+        item_name: 'Tiramisu',
+        item_image: desert6 
+    }
+]
+
+export const totalItems =[
+    {
+        item_name: 'Avocado dip',
+        item_image: appetizer1 
+    },
+    {
+        item_name: 'Bruschetta',
+        item_image: appetizer2 
+    },
+    {
+        item_name: 'Cheese bites',
+        item_image: appetizer3
+    },
+    {
+        item_name: 'Cranberry',
+        item_image: appetizer4 
+    },
+    {
+        item_name: 'Deviled eggs',
+        item_image: appetizer5 
+    },
+    {
+        item_name: 'Stuffed mushrooms',
+        item_image: appetizer6 
+    },
+    {
+        item_name: 'Chicken parmesan',
+        item_image: maincourse1 
+    },
+    {
+        item_name: 'Chickpea spinach curry',
+        item_image: maincourse2 
+    },
+    {
+        item_name: 'Mushroom Risotto',
+        item_image: maincourse3
+    },
+    {
+        item_name: 'Paneer tikka masala',
+        item_image: maincourse4 
+    },
+    {
+        item_name: 'Salmon with lemon butter sauce',
+        item_image: maincourse5 
+    },
+    {
+        item_name: 'Vegetable lasagna',
+        item_image: maincourse6 
+    },
     {
         item_name: 'Apple pie',
         item_image: desert1 

@@ -12,6 +12,7 @@ import Cart from "./Cart/Cart";
 import Home from "./Home";
 import { countContext } from "./context/count";
 import { itemAddedContext } from "./context/addedItemContext";
+import { NotifyContext } from "./context/itemNotificationContext";
 
 const App = ()=>{
   const navigate = useNavigate();
@@ -30,11 +31,14 @@ const App = ()=>{
   let [count, setCount] = useState(0);
   let [cartItems, setCartItems] = useState([]);
 
+  let [notify, setNotify] = useState(false)
+
   return(
     <>
     <ToastContainer />
+    <NotifyContext.Provider value = {{notify, setNotify}}>
     <countContext.Provider value = {{count, setCount}}>
-      <itemAddedContext.Provider value={{cartItems, setCartItems}}>
+    <itemAddedContext.Provider value={{cartItems, setCartItems}}>
     <Routes>
       <Route path ="/" element ={<Login />}/>
       <Route path ="/home" element={<Home />}/>
@@ -43,6 +47,7 @@ const App = ()=>{
     </Routes>
     </itemAddedContext.Provider>
     </countContext.Provider>
+    </NotifyContext.Provider>
     </>
   )
 }

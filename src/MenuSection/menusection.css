@@ -5,6 +5,8 @@
     align-items:self-end;
     justify-content: center;
     /* background-color: blanchedalmond; */
+    position: fixed;
+    background-color: #fff;
 }
 .search-part{
     display: flex;
@@ -24,14 +26,16 @@
     cursor: pointer;
     margin-bottom: 10px;
     font-size: 30px;
+    display: none;
 }
 
 .items{
-    height: 225vh;
+    height: 270vh;
     width: 100%;
     /* background-color: cadetblue; */
     display: flex;
     flex-direction: column;
+    margin-top: 23vh;
 }
 .name{
     height: 10%;
@@ -89,4 +93,44 @@
     display: flex;
     flex-direction: column;
     /* background-color: chartreuse; */
+}
+
+@media (max-width: 600px){
+    .header input{height: 6vh;
+        width: 50vw;
+    }
+    .header input::before{
+        width: 30vw;
+    }
+    .header input::after{
+        width: 60vw;
+    }
+    .header i{
+        display: none;
+    }
+    .items{
+        height: 450vh;
+    }
+    .foodItems{
+        /* padding: 1vw; */
+        display: grid;
+        grid-template-rows: 26% auto;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 9vw;
+        padding: 0 0 0 40px;
+    }
+    .appetizer-items{
+        height: 37vh;
+        width: 35vw;
+    }
+    .appetizer-items img{
+        width: 100%;
+        height: 70%;
+        border-radius: 50%;
+    }
+    .appetizer-items p{
+        margin-top: 5px;
+        font-size: 19px;
+        height: 20vh;
+    }
 }

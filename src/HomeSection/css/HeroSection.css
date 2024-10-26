@@ -10,7 +10,9 @@
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
+    /* margin-top: 0px; */
   }
+
   .menu{
     position: absolute;
     z-index: 2;
@@ -170,31 +172,80 @@
     justify-content: center;
   }
 
-  @media screen and (max-width:500px){
+  @media (max-width: 600px){
     .menu{
-      position: absolute;
-      z-index: 1;
-      background-image: url(./assets/menu3.JPG);
-      background-color: #383d52;
-      width: 50vw;
       height: 100vh;
-      background-position:center;
-      background-repeat: no-repeat;
-      left: 34%;
+      width: 90vw;
+      position: absolute;
+      z-index: 101;
+      left: 5%;
       top: 0;
-      justify-content: end;
+      background-color: #061E5C;
+      background-image: url(../../assets/menu3.JPG);
+      background-size: cover;
+      background-position: center;
+    }
+    .menu button{
+      width: 5.5vw;
+      height: 4.1vh;
+      padding: 5px;
+    }
+    .hero-section h1{
+      position: absolute;
+      top: 20vh;
+      left: 23vw;
+      width: 60vw;
+      font-size: 34px;
+      color: #9db2fc;
+      z-index: 1;
+    }
+    .hero-section p{
+      position: absolute;
+      top: 35vh;
+      left: 29vw;
+      font-size: 5vh;
+      color: rgb(203, 228, 250);
+      z-index: 1;
+    }
+    .hero-section h3{
+      font-size: 4vh;
+    }
+    .hero-section h3::before{
+      content: attr(data-text);
+      position:absolute;
+      top: 50%;
+      left: 7%;
+      width: 0;
+      height: 10%;
+      color: #FFB41D;
+      -webkit-text-stroke: 0vw #383d52;
+      border-right: 2px solid #061E5C;
+      overflow: hidden;
+      animation: animate 6s linear infinite;
+    }
+    @keyframes animate{
+      0%,10%,100%{
+        width: 0;
+      }
+      70%,90%{
+        width: 88%;
+      }
+    }
+    .button1{
+      position: absolute;
+      top: 75%;
+      width: 50vw;
+      padding: 3px;
+      border: 1px solid #9db2fc;
+      height: 8vh;
+      border-radius: 3vh;
+      background: transparent;
+      font-size: 2.6vh;
+      color: #a9c0f8;
+      font-family: "Lumanosimo", cursive;
+      font-weight: 600;
+      font-style: normal;
+      z-index: 1;
     }
     
-    .menu button{
-      width: 2vw;
-      float: right;
-      border: 1px solid white;
-      padding: 0.5vh;
-      border-radius: 50%;
-      background-color: #a9c0f8;
-      height: 4vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
   }
